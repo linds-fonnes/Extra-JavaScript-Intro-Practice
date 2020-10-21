@@ -651,8 +651,15 @@ console.log(telephoneNumber('Anaa'));
 
 /*TASK 5 🚀 
 // Write a function that will return all the airports in a given country  */
-
-
+function allAirports(whichOne){
+  for (let i=0; i < airports.length; i++){
+    const newAllAirports = airports[i];
+    if (whichOne === airports[i].country){
+      return newAllAirports;
+    }
+  }
+}
+console.log(allAirports('French Polynesia'));
 
 /*TASK 6 🚀 
 // Write a function that takes and airport name and returns the airport code
