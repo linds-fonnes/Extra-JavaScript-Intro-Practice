@@ -678,7 +678,14 @@ console.log(airportCode('Abuja International Airport'));
 /*TASK 7 🚀
 // Write a function that takes an airport code and returns the number of direct flights available */
 
+function flightsAvailable(whichOne){
+  for (let i=0; i < airports.length; i++){
+    if (whichOne === airports[i].code){
+      return airports[i].direct_flights;
+    }
+  }
+}
 
-
+console.log(flightsAvailable('ABT'));
 /*TASK 8 🚀
 // Find out what your flight options are - write a function that returns a new array of all the country names in a set of data*/
