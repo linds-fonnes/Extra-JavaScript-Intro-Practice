@@ -626,7 +626,18 @@ exchangeRate(24,'Ukraine');
 /// Write a function that takes an airport code and returns the city, country of that airport 
 // find the following codes AAA, ABZ, ABX, ABT, ACA */
 
-
+function airport(whichOne){
+  for (let i=0; i < airports.length; i++) {
+    if (whichOne === airports[i].code) {
+      return airports[i].city + ' ' + airports[i].country;
+    }
+  }
+}
+console.log(airport('AAA'));
+console.log(airport('ABZ'));
+console.log(airport('ABX'));
+console.log(airport('ABT'));
+console.log(airport('ACA'));
 /*TASK 4 🚀 
 // Write a function to that will find the phone number for an airport in a given city  */
 
