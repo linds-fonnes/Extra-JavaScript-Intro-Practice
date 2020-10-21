@@ -594,7 +594,8 @@ console.log(subtract(1,2));
 /* Work out 💪 */
 /* TASK 1 🚀 
 // Dollars to Euros - write a function that will take an amount of dollars (USD) and change it  into euros (EUR) - with the current exchange rate 1 USD === .85 EUR */
-
+convert = (USD) => USD * .85;
+console.log(convert(100));
 
 /* TASK 2 🚀 
 // Take the function above a step further - you have dollars and you are visiting the following 5 countries: Britan, Germany, Turkey, Bulgaria and Ukraine - you need to write a function that will take a dollar amount, and a country and return the exchange rate for that country - the function should return a string that says `your exchange rate for dollarAmount dollars in country will be exchangeRate currencyInitals ` If the country is not on your list your string should return 'that country is not on your list'
@@ -604,6 +605,22 @@ console.log(subtract(1,2));
 // 1 usd === 1.66 Bulgarian Lev 
 // 1 usd === 27.7 Ukrainian hryvnia */
 
+function exchangeRate(USD,country){
+  if (country === 'Britain') {
+    console.log(`Your exchange rate for ${USD} dollars in ${country} will be ${USD * .77} British Pounds`);
+  } else if (country === 'Germany') {
+    console.log(`Your exchange rate for ${USD} dollars in ${country} will be ${USD * .85} Euros`);
+  } else if (country === 'Turkey') {
+    console.log(`Your exchange rate for ${USD} dollars in ${country} will be ${USD * 6.96} Turkish Lira`);
+  } else if (country === 'Bulgaria') {
+    console.log(`Your exchange rate for ${USD} dollars in ${country} will be ${USD * 1.66} Bulgarian Lev`);
+  } else if (country === 'Ukraine') {
+    console.log(`Your exchange rate for ${USD} dollars in ${country} will be ${USD * 27.7} Ukrainian Hryvnia`);
+  } else {
+    console.log(`That country is not on your list`);
+  }
+}
+exchangeRate(24,'Ukraine');
 
 /*TASK 3 🚀
 /// Write a function that takes an airport code and returns the city, country of that airport 
