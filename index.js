@@ -664,8 +664,16 @@ console.log(allAirports('French Polynesia'));
 /*TASK 6 🚀 
 // Write a function that takes and airport name and returns the airport code
 // find the code for the following airports: Al Baha Airport, Ambler Airport, Abuja International Airport*/
-
-
+function airportCode(whichOne){
+  for (let i=0; i < airports.length; i++){
+    if (whichOne === airports[i].name){
+      return airports[i].code;
+    }
+  }
+}
+console.log(airportCode('Al Baha Airport'));
+console.log(airportCode('Ambler Airport'));
+console.log(airportCode('Abuja International Airport'));
 
 /*TASK 7 🚀
 // Write a function that takes an airport code and returns the number of direct flights available */
