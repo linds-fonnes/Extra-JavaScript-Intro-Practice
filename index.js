@@ -640,8 +640,14 @@ console.log(airport('ABT'));
 console.log(airport('ACA'));
 /*TASK 4 🚀 
 // Write a function to that will find the phone number for an airport in a given city  */
-
-
+function telephoneNumber(whichOne){
+  for (let i=0; i < airports.length; i++){
+    if (whichOne === airports[i].city){
+      return airports[i].phone;
+    }
+  }
+}
+console.log(telephoneNumber('Anaa'));
 
 /*TASK 5 🚀 
 // Write a function that will return all the airports in a given country  */
